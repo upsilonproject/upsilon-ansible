@@ -1,0 +1,12 @@
+---
+- include_role: 
+    name: repos-rpm-el7
+  when: 
+    - deployment_type == 'rpm'
+    - ansible_distribution == 'CentOS'
+
+- include_role: 
+    name: repos-docker-el7
+  when: 
+    - deployment_type == 'docker'
+    - ansible_distribution == 'CentOS'

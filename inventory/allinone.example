@@ -1,0 +1,19 @@
+# This inventory file will install upsilon in docker containers, all in one 
+# host. Copy it to /etc/ansible/hosts on the node where you want to install it.
+#
+# Then run the playbook; 
+# 		user@host: cd upsilon-ansible
+#		user@host: ansible-playbook site.yml
+
+[upsilon-allinone:vars]
+deployment_type=docker
+docker_web_port=85
+
+database_host=localhost
+database_pass=upsilon
+database_user=upsilon
+
+
+[upsilon-allinone]
+# Example, to install on localhost, uncomment the following line;
+# localhost ansible_connection=local

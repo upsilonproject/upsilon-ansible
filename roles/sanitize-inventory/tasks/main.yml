@@ -1,0 +1,17 @@
+- name: Check deployment_type is set
+  when: 
+    - deployment_type is not defined
+  fail:
+    msg: You need to set the deployment_type.
+
+- name: Check deployment_type is valid
+  when:
+    - deployment_type not in known_deployment_types
+  fail:
+    msg: "Not a valid deployment type: {{ deployment_type }}"
+
+- name: Check database variables are set
+  when:
+    - database_host is not defined or database_user is not defined or database_pass is not defined
+  fail:
+    msg: "Database variables not set"

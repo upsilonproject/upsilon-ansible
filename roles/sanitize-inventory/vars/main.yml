@@ -1,0 +1,2 @@
+---
+known_deployment_types: ["rpm", "docker"]

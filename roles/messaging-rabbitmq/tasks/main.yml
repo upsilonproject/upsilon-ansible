@@ -1,0 +1,19 @@
+---
+- yum: 
+  when: 
+    - ansible_distribution == 'CentOS'
+    - deployment_type == 'rpm'
+
+- service: name=rabbitmq-server state=started enabled=yes
+  when:
+    - deployment_type == 'rpm'
+
+- docker_container: 
+    name: upsilon-amqp
+    image: luiscoms/openshift-rabbitmq:management
+    state: started
+    ports:
+      - 5672:5672 
+      - 15672:15672 
+  when: 
+    - deployment_type == 'docker'

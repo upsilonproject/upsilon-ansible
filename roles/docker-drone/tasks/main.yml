@@ -2,4 +2,7 @@
 - docker_container:
     name: upsilon-drone
     image: upsilonproject/drone
-    state: present
+    state: started
+    ports: 
+      - 4000:4000
+

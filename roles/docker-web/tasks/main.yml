@@ -2,4 +2,10 @@
 - docker_container:
     name: upsilon-web
     image: upsilonproject/web
-    state: present
+    state: started
+    ports:
+      - "{{ docker_web_port }}:8080"
+    env:
+      CFG_DB_DSN: "mysql:db_host={{ database_host }}"
+      CFG_DB_PASS: "{{ database_pass }}"
+      CFG_DB_USER: "{{ database_user }}"
