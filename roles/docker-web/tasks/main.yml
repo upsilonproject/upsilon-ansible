@@ -1,0 +1,5 @@
+---
+- docker_container:
+    name: upsilon-web
+    image: upsilonproject/web
+    state: present

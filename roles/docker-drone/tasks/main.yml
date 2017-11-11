@@ -1,0 +1,5 @@
+---
+- docker_container:
+    name: upsilon-drone
+    image: upsilonproject/drone
+    state: present

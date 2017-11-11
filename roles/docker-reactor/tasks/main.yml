@@ -1,0 +1,5 @@
+---
+- docker_container:
+    name: upsilon-reactor
+    image: upsilonproject/reactor
+    state: present
