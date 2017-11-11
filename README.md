@@ -4,7 +4,8 @@
 
 ### allinone
 
-Installs drone and web on a single box.
+Installs drone and web on a single box. You can copy
+`inventory/allinone.example` to `/etc/ansible/hosts` on your ansible host.
 
 ## Variables
 
