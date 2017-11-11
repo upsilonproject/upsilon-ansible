@@ -1,7 +1,7 @@
 # upsilon-ansible
 
 These scripts are in very **early development**, they help, but don't install a
-full environment. Only useful if you know UPsilon pretty well right now. If you
+full environment. Only useful if you know Upsilon pretty well right now. If you
 want to play around with Upsilon for testing, **don't use this method**,
 instead try the other methods listed in the [upsilon docs](http://www.upsilonproject.io/docs).
 
