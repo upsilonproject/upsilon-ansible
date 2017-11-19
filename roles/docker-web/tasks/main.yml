@@ -1,5 +1,6 @@
 ---
-- docker_container:
+- name: Create upsilon-web container
+  docker_container:
     name: upsilon-web
     image: upsilonproject/web
     state: started

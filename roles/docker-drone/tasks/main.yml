@@ -1,5 +1,6 @@
 ---
-- docker_container:
+- name: create upsilon-drone container
+  docker_container:
     name: upsilon-drone
     image: upsilonproject/drone
     state: started

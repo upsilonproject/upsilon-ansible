@@ -1,7 +1,9 @@
 ---
-- yum: name={{item}} state=present
+- name: Yum install MariaDB server & client
+  yum: name={{item}} state=present
   with_items: 
     - mariadb-server
     - mariadb
 
-- service: name=mariadb state=started enabled=yes
+- name: Start and enable MariaDB service
+  service: name=mariadb state=started enabled=yes

@@ -1,5 +1,6 @@
 ---
-- docker_container:
+- name: create upsilon-custodian container
+  docker_container:
     name: upsilon-custodian
     image: upsilonproject/custodian
     state: present

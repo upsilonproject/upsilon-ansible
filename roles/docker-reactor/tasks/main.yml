@@ -1,5 +1,6 @@
 ---
-- docker_container:
+- name: create upsilon-reactor container
+  docker_container:
     name: upsilon-reactor
     image: upsilonproject/reactor
     state: present
