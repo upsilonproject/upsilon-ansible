@@ -1,0 +1,24 @@
+---
+- hosts: all
+  roles: 
+    - sanitize-inventory
+    - repos
+
+- hosts: drone
+  roles: 
+    - docker-drone
+
+- hosts: custodian
+  roles: 
+    - docker-custodian
+
+- hosts: web
+  roles: 
+    - docker-web
+
+- hosts: upsilon-allinone
+  roles:
+    - messaging-rabbitmq
+    - database-mysql
+    - docker-web
+    - docker-drone
