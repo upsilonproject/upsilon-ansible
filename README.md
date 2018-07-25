@@ -5,7 +5,21 @@ full environment. Only useful if you know Upsilon pretty well right now. If you
 want to play around with Upsilon for testing, **don't use this method**,
 instead try the other methods listed in the [upsilon docs](http://www.upsilonproject.io/docs).
 
-## Common inventories
+## Common structure
+
+* site
+    * setup
+        - docker 
+        - rpm
+    * checks
+    * dependencies
+    * ...
+
+sanitize-inventory
+
+## How to use
+
+## Example inventories
 
 You should copy one of the example inventories to a useful place, or `/etc/ansible/hosts` to run these playbooks.
 
