@@ -1,0 +1,37 @@
+all:
+  vars:
+    ansible_user: vagrant
+    deployment_type: rpm
+    database_host: localhost
+    database_pass: upsilon
+    database_user: upsilon
+  children:
+    drones:
+      hosts:
+        drone1: 
+          ansible_host: 192.168.66.192
+        drone2: 
+          ansible_host: 192.168.66.226
+        drone3: 
+          ansible_host: 192.168.66.216
+    web:
+      hosts:
+        web1: 
+          ansible_host: 192.168.66.210
+        web2: 
+          ansible_host: 192.168.66.173
+        web3: 
+          ansible_host: 192.168.66.158
+    amqp:
+      hosts:
+        rabbit: 
+          ansible_host: 192.168.66.215
+    db:
+      hosts:
+        mysql: 
+          ansible_host: 192.168.66.175
+    custodians:
+      hosts:
+        custodian: 
+          ansible_host: 192.168.66.171
+
