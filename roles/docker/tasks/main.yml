@@ -1,0 +1,9 @@
+---
+- yum:
+    name: python-docker-py
+  when: ansible_distribution == "CentOS"
+
+- service: 
+    name: docker
+    state: started
+    enabled: true

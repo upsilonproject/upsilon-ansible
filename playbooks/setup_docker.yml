@@ -1,0 +1,20 @@
+---
+- hosts: all
+  roles: 
+    - docker
+
+- hosts: drone
+  roles: 
+    - docker-drone
+
+- hosts: custodian
+  roles: 
+    - docker-custodian
+
+- hosts: web
+  roles: 
+    - docker-web
+
+- hosts: amqp
+  roles: 
+    - docker-amqp

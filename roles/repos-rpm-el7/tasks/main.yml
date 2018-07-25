@@ -1,5 +1,5 @@
 ---
-- yum_repository: name=upsilon baseurl=http://repos.upsilonproject.io/upsilon-rpm-el7/ description=upsilon-rpm-el7
+- yum_repository: name=upsilon baseurl=http://repos.upsilonproject.io/upsilon-rpm-el7/ description=upsilon-rpm-el7 gpgcheck=no
 - yum: name={{item}} state=present
   with_items: 
     - upsilon-pycommon

@@ -5,19 +5,20 @@ full environment. Only useful if you know Upsilon pretty well right now. If you
 want to play around with Upsilon for testing, **don't use this method**,
 instead try the other methods listed in the [upsilon docs](http://www.upsilonproject.io/docs).
 
-## Common structure
+## Order of playbooks
 
-* site
-    * setup
-        - docker 
-        - rpm
+* site **<- always execute this playbook**
     * checks
     * dependencies
+    * setup
+        One of; 
+        - docker 
+        - rpm
     * ...
 
-sanitize-inventory
-
 ## How to use
+
+    ansible-playbook -i oneOfTheCopiedExampleInventories site.yml
 
 ## Example inventories
 

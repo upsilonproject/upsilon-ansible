@@ -1,0 +1,7 @@
+---
+- name: create amqp container
+  docker_container:
+    name: rabbit
+    image: luiscoms/openshift-rabbitmq:management
+    state: started
+    ports: "15672:15672"

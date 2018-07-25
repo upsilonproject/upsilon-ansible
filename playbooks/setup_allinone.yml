@@ -1,0 +1,7 @@
+---
+- hosts: allinone
+  roles:
+    - messaging-rabbitmq
+    - database-mysql
+    - docker-web
+    - docker-drone

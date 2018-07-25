@@ -1,24 +1,11 @@
 ---
-- hosts: all
-  roles: 
-    - sanitize-inventory
-    - repos
+- import_playbook: setup_docker.yml
+  when: deployment_type == "docker"
 
-- hosts: drone
-  roles: 
-    - docker-drone
+- import_playbook: setup_rpm.yml
+  when: deployment_type == "rpm"
 
-- hosts: custodian
-  roles: 
-    - docker-custodian
+- import_playbook: setup_allinone.yml
+  when: "'allinone' in groups"
 
-- hosts: web
-  roles: 
-    - docker-web
 
-- hosts: upsilon-allinone
-  roles:
-    - messaging-rabbitmq
-    - database-mysql
-    - docker-web
-    - docker-drone

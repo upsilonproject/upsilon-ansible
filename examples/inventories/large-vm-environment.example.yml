@@ -1,12 +1,14 @@
 all:
   vars:
     ansible_user: vagrant
-    deployment_type: rpm
+    ansible_become: true
+    docker_web_port: 8085
+    deployment_type: docker
     database_host: localhost
     database_pass: upsilon
     database_user: upsilon
   children:
-    drones:
+    drone:
       hosts:
         drone1: 
           ansible_host: 192.168.66.192
@@ -30,8 +32,8 @@ all:
       hosts:
         mysql: 
           ansible_host: 192.168.66.175
-    custodians:
+    custodian:
       hosts:
-        custodian: 
+        custodian1: 
           ansible_host: 192.168.66.171
 

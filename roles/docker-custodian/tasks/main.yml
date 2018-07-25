@@ -3,4 +3,4 @@
   docker_container:
     name: upsilon-custodian
     image: upsilonproject/custodian
-    state: present
+    state: started
