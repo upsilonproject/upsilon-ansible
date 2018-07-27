@@ -1,4 +1,5 @@
 ---
-- yum:
+- name: install upsilon-drone
+  yum:
     name: upsilon-drone
     state: present
