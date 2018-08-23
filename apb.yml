@@ -1,0 +1,27 @@
+---
+version: 1.0.0
+name: upsilon-ansible
+description: Upsilon Project Ansible Playbooks
+bindable: false
+async: optional
+metadata:
+  documentationUrl: http://docs.upsilonproject.io/#upsilon-ansible
+plans:
+  - name: scalable
+    description: A scalable Upsilon environment.
+    free: true
+    metadata:
+      displayName: Scalable
+      cost: $0.00
+    parameters:
+      - name: SYSTEM_ID
+        default: 0
+        type: string
+        maxlength: 64
+      - name: TITLE
+        default: "Untitled environment"
+        maxlength: 64
+        type: string
+      - name: DEPLOY_DATABASE
+        type: enum
+        enum: ["NO", "MYSQL"]
