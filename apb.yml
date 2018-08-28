@@ -1,27 +1,38 @@
 ---
 version: 1.0.0
 name: upsilon-ansible
-description: Upsilon Project Ansible Playbooks
+description: Upsilon Project APB
 bindable: false
 async: optional
 metadata:
   documentationUrl: http://docs.upsilonproject.io/#upsilon-ansible
+  dependencies: []
+  displayName: Upsilon APB
+  longDescription: Upsilon Project APB
 plans:
   - name: scalable
     description: A scalable Upsilon environment.
+    longDescription: A scalable Upsilon environment.
     free: true
+    bindable: false
     metadata:
       displayName: Scalable
       cost: $0.00
     parameters:
       - name: SYSTEM_ID
+        title: System ID
         default: 0
         type: string
         maxlength: 64
+        required: true
       - name: TITLE
+        title: Title
         default: "Untitled environment"
         maxlength: 64
         type: string
+        required: true
       - name: DEPLOY_DATABASE
+        title: Deploy Database?
         type: enum
         enum: ["NO", "MYSQL"]
+        required: true
