@@ -7,5 +7,3 @@
 
 - import_playbook: setup_allinone.yml
   when: "'allinone' in groups"
-
-

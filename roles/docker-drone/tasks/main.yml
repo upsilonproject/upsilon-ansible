@@ -4,6 +4,5 @@
     name: upsilon-drone
     image: upsilonproject/drone
     state: started
-    ports: 
+    ports:
       - 4000:4000
-

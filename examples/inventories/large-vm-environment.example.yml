@@ -1,3 +1,4 @@
+---
 all:
   vars:
     ansible_user: vagrant
@@ -10,30 +11,29 @@ all:
   children:
     drone:
       hosts:
-        drone1: 
+        drone1:
           ansible_host: 192.168.66.192
-        drone2: 
+        drone2:
           ansible_host: 192.168.66.226
-        drone3: 
+        drone3:
           ansible_host: 192.168.66.216
     web:
       hosts:
-        web1: 
+        web1:
           ansible_host: 192.168.66.210
-        web2: 
+        web2:
           ansible_host: 192.168.66.173
-        web3: 
+        web3:
           ansible_host: 192.168.66.158
     amqp:
       hosts:
-        rabbit: 
+        rabbit:
           ansible_host: 192.168.66.215
     db:
       hosts:
-        mysql: 
+        mysql:
           ansible_host: 192.168.66.175
     custodian:
       hosts:
-        custodian1: 
+        custodian1:
           ansible_host: 192.168.66.171
-
